@@ -1,4 +1,4 @@
-const LINE_URL = 'https://line.me/ti/p/MFNrCUgMpT';
+const LINE_URL = 'https://line.me/R/ti/p/@336rpcxy';
 const CLICK_DELAY_MS = 800;
 const VIEW_CONTENT_DELAY_MS = 5000;
 
