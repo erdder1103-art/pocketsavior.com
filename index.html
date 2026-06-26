@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>口袋救星｜債務整合與還款規劃諮詢</title>
   <meta name="description" content="口袋救星提供債務整合、還款規劃與月繳壓力整理諮詢。警示戶、銀行呆帳、銀行協商、融資貸款遲繳、支付命令、聯徵多查、信用卡負債過高等狀況皆可先評估。">
+
   <meta property="og:type" content="website">
   <meta property="og:title" content="口袋救星｜債務整合與還款規劃諮詢">
   <meta property="og:description" content="高利、當鋪、代書、融資、信用卡負債與多筆月繳壓力，協助整理可行還款方向。特殊信用狀況也可先加 LINE 評估。">
   <meta property="og:image" content="assets/logo.png">
+
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="口袋救星｜債務整合與還款規劃諮詢">
   <meta name="twitter:description" content="多筆債務、遲繳紀錄、聯徵多查、信用卡負債過高，都可先諮詢評估。">
   <meta name="twitter:image" content="assets/logo.png">
+
   <link rel="icon" href="assets/logo.png">
   <link rel="stylesheet" href="assets/style.css">
 
@@ -238,6 +241,26 @@
       <span class="btn-label">LINE 諮詢吳先生</span>
     </a>
   </div>
+
+  <!-- LINE 按鈕 Contact 聯絡事件追蹤 -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var lineButtons = document.querySelectorAll('[data-line-link]');
+
+    lineButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var position = button.getAttribute('data-line-position') || 'unknown';
+
+        if (typeof fbq === 'function') {
+          fbq('track', 'Contact', {
+            contact_method: 'LINE',
+            button_position: position
+          });
+        }
+      });
+    });
+  });
+  </script>
 
   <script src="assets/script.js"></script>
 </body>
